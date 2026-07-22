@@ -1,3 +1,8 @@
+# I exceeded the requirements by adding a dictionary that contains known
+# chemical formulas and their names.
+# I also wrote a function named get_formula_name that looks up the
+# compound name and displays it when the formula is recognized.
+
 from formula import parse_formula
 
 # Indexes for inner lists in the periodic table
@@ -8,7 +13,7 @@ ATOMIC_MASS_INDEX = 1
 SYMBOL_INDEX = 0
 QUANTITY_INDEX = 1
 
-def  make_periodic_table():
+def make_periodic_table():
     
     periodic_table_dict = {
         # symbol: [name, atomic_mass]
@@ -158,7 +163,7 @@ def get_formula_name(formula, known_molecules_dict):
     Retrieves the name of a chemical formula from the known_molecules_dict dictionary.
     """
     if formula in known_molecules_dict:
-        return (f"Compound: " + known_molecules_dict[formula])
+        return f"Compound: {known_molecules_dict[formula]}"
     else:
         return "Unknown"
 
